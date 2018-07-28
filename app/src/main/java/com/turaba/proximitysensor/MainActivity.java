@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements SensorEventListener{
     private SensorManager sensorManager;
-    TextView tvProximityValue;
     private Sensor mProximity;
 
 
@@ -19,7 +18,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        tvProximityValue=findViewById(R.id.tv_proximity);
         sensorManager=(SensorManager)getSystemService(SENSOR_SERVICE);
         mProximity=sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
     }
